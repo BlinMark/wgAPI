@@ -1,0 +1,36 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" />
+
+    <title>Event</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <center><h1>BETA for 6 company </h1></center>
+    </div>
+    <div class="wrapper">
+
+    </div>
+    <div class="container">
+        <form action="{% url "event:search" %}" id="nickname" method="post">
+            <div class="group">
+                {% render_field form.nickname type="text" id="player" %}
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label for="player">Nickname</label>
+                {% csrf_token %}
+                <input type="submit" form="nickname" id="search" value="Search">
+            </div>
+        </form>
+    </div>
+    <h1>{{ nickname }}</h1>
+    <p>Очков славы: {{ frame_points }}</p>
+    {{ company_info }}
+
+</body>
+</html>
