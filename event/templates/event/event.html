@@ -1,0 +1,10 @@
+{% extends 'event/base.html' %}
+
+{% block content %}
+    <h1>{{ nickname }}</h1>
+    <p>Данные на: <span class="color_green">{{ updated_at }}</span></p>
+    <p>Очков славы: {{ frame_points }}</p>
+    <p>Бои: {{ battles }}</p>
+
+
+{%  endblock %}

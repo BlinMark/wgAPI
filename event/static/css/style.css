@@ -127,3 +127,21 @@ input:focus ~ .highlight {
 }
 
 
+.footer{
+  position: absolute;
+  top: calc(100vh - 90px);
+  width: 100vw;
+  height: 90px;
+  background: rgb(25,25,25);
+  left: 0;
+}
+.develop{
+  float: left;
+  width: 300px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.color_green{
+  color: green;
+}

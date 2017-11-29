@@ -1,8 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
-from django.contrib.auth.models import User
-from .forms import PlayerForm
+from django.shortcuts import render
 from .event import player, company
+from .forms import PlayerForm
 
 
 def index(request):
@@ -22,13 +20,19 @@ def search(request):
             nickname = player(request.POST['nickname'])[1]
             company_info = company(user_id)[0]
             frame_points = company(user_id)[1]
+            battles = company(user_id)[2]
+            rank = company(user_id)[3]
+            updated_at = company(user_id)[4]
     form = PlayerForm()
 
-    return render(request, 'event/index.html', {'index': index,
+    return render(request, 'event/event.html', {'index': index,
                                                 'form': form,
                                                 'user_id': user_id,
                                                 'nickname': nickname,
-                                                # 'company_info': company_info,
                                                 'frame_points': frame_points,
+                                                # 'company_info': company_info,
+                                                'battles': battles,
+                                                'rank': rank,
+                                                'updated_at': updated_at
                                                 })
 
