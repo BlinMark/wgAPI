@@ -1,0 +1,176 @@
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+body {
+    color: white;
+    background: url(http://s018.radikal.ru/i523/1711/40/ed1bc83c593c.png);
+    /*http://s018.radikal.ru/i506/1711/8a/9e8795b699fd.png*/
+    /*http://s016.radikal.ru/i335/1711/15/76ca6e4a5da7.png*/
+}
+.container {
+  font-family:'Roboto';
+  width:600px;
+  margin:100px auto 0 auto;
+  display:block;
+  padding:30px 50px;
+  border-radius: 15px;
+}
+h2 {
+  text-align:center;
+  margin-bottom:50px;
+}
+h2 small {
+  font-weight:normal;
+  color:#888;
+  display:block;
+}
+ul {
+  list-style: none;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  transition: .1s linear;
+}
+.navbar ul {
+  overflow: hidden;
+  padding: 0;
+}
+.navbar li {
+  float: left;
+}
+.navbar a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+.navbar a:hover {color: rgb(180,180,180)}
+
+
+.footer { text-align:center; }
+.footer a { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group {
+  position:relative;
+}
+input {
+  font-weight: 700;
+  color: #fff;
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  background: none;
+  border-bottom:1px solid #757575;
+}
+input:focus { outline:none; }
+
+/* LABEL ======================================= */
+label {
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+label:hover{
+
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color: rgb(255,255,255);
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:4px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:rgb(51,102,0);
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100%;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+.navbar{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: auto;
+  width: 100vw;
+  background: rgb(25,25,25);
+  box-shadow: 0 0 10px #000;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.no-view{
+  visibility: hidden;
+  display: none;
+}
+
+.footer{
+  position: absolute;
+  top: calc(100vh - 90px);
+  width: 100vw;
+  height: 90px;
+  background: rgb(25,25,25);
+  left: 0;
+}
+.develop{
+  float: left;
+  width: 300px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+
+.color_green{
+  color: green;
+}
