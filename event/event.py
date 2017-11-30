@@ -1,6 +1,6 @@
 import urllib
 import time
-
+import urllib.request
 from builtins import NameError, eval, str, IndexError, KeyError
 
 

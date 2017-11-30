@@ -24,6 +24,30 @@ h2 small {
   color:#888;
   display:block;
 }
+ul {
+  list-style: none;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  transition: .1s linear;
+}
+.navbar ul {
+  overflow: hidden;
+  padding: 0;
+}
+.navbar li {
+  float: left;
+}
+.navbar a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+.navbar a:hover {color: rgb(180,180,180)}
+
+
 .footer { text-align:center; }
 .footer a { color:#53B2C8; }
 
@@ -115,17 +139,21 @@ input:focus ~ .highlight {
   position: absolute;
   top:0;
   left: 0;
-  height: 100px;
+  height: auto;
   width: 100vw;
   background: rgb(25,25,25);
   box-shadow: 0 0 10px #000;
 }
-
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .no-view{
   visibility: hidden;
   display: none;
 }
-
 
 .footer{
   position: absolute;
@@ -141,6 +169,7 @@ input:focus ~ .highlight {
   display: inline-block;
   margin-top: 5px;
 }
+
 
 .color_green{
   color: green;
