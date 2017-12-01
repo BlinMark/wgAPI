@@ -3,8 +3,25 @@
 {% block content %}
     <h1>{{ nickname }}</h1>
     <p>Данные на: <span class="color_green">{{ updated_at }}</span></p>
-    <p>Очков славы: {{ frame_points }}</p>
-    <p>Бои: {{ battles }}</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Очки славы</td>
+            <td>Позиция</td>
+            <td>Бои</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ frame_points }}</td>
+            <td>{{ rank }}&#032;(<span class="color_red">{{ rank_delta }}</span>)</td>
+            <td>{{ battles }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
 
 
 {%  endblock %}

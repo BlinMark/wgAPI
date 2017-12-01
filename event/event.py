@@ -57,10 +57,11 @@ def company(user_id):
         updated_at = company_info['data'][str(user_id)]['events'][event_id][0]['updated_at']
         battles = company_info['data'][str(user_id)]['events'][event_id][0]['battles']
         rank = company_info['data'][str(user_id)]['events'][event_id][0]['rank']
+        rank_delta = company_info['data'][str(user_id)]['events'][event_id][0]['rank_delta']
         updated_at = time.strftime("%d %b %Y | %H:%M:%S", time.localtime(updated_at))
     except:
-        frame_points = 'Игрок не принимал участия в событии'
-    return company_info, frame_points, battles, rank, updated_at
+        frame_points = 'недостаточно боёв'
+    return company_info, frame_points, battles, rank, updated_at, rank_delta
 
 
 def bin_to_string(data):

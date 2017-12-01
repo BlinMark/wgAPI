@@ -169,8 +169,24 @@ input:focus ~ .highlight {
   display: inline-block;
   margin-top: 5px;
 }
-
-
+ .table{
+   text-align: center;
+   vertical-align: middle;
+ }
+td{
+  width: 100px;
+}
+table, td{
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.content{
+  width: 400px;
+  margin: 0 auto;
+}
 .color_green{
   color: green;
+}
+.color_red{
+  color: red;
 }

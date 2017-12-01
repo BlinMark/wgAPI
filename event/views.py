@@ -23,6 +23,7 @@ def search(request):
             battles = company(user_id)[2]
             rank = company(user_id)[3]
             updated_at = company(user_id)[4]
+            rank_delta = company(user_id)[5]
     form = PlayerForm()
 
     return render(request, 'event/event.html', {'index': index,
@@ -33,6 +34,7 @@ def search(request):
                                                 # 'company_info': company_info,
                                                 'battles': battles,
                                                 'rank': rank,
-                                                'updated_at': updated_at
+                                                'updated_at': updated_at,
+                                                'rank_delta': rank_delta,
                                                 })
 
